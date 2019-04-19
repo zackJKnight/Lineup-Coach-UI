@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Position } from '../../position';
 import { POSITIONS } from '../../positions';
+
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-player-add',

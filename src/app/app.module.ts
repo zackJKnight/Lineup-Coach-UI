@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
 import { PlayerAddComponent } from "./player/player-add/player-add.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatFormFieldModule, MatInputModule } from "@angular/material";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 @NgModule({
   declarations: [AppComponent, PlayerAddComponent],
@@ -16,6 +16,7 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     BrowserAnimationsModule,
     FormsModule,
     MatFormFieldModule,
+    MatInputModule,
     DragDropModule
   ],
   providers: [],

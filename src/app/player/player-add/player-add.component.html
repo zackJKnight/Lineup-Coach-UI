@@ -1,16 +1,16 @@
-<form>
-  <div class="form-container">
-  <mat-form-field>
-  <input matInput #firstname placeholder="First Name"/>
+<div class="form-container">
+  <mat-form-field appearance="standard">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="First Name">
   </mat-form-field>
-  <mat-form-field>
-  <input matInput #lastname placeholder="Last Name"/>
+  <mat-form-field appearance="standard">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Last Name">
   </mat-form-field>
-  <button>Save</button>
-</div>
-</form>
-<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let position of positions" cdkDrag>
-    {{position.name}}
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let position of positions" cdkDrag>
+      {{ position.name }}
+    </div>
   </div>
+  <button>Save</button>
 </div>

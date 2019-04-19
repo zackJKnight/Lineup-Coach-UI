@@ -1,17 +1,16 @@
 <form>
+  <div class="form-container">
   <mat-form-field>
   <input matInput #firstname placeholder="First Name"/>
   </mat-form-field>
   <mat-form-field>
   <input matInput #lastname placeholder="Last Name"/>
   </mat-form-field>
-  <div>
-    <label>Pick your favorite position</label>
-  <ul class="positions">
-      <li *ngFor="let position of positions">
-        {{position.name}}
-      </li>
-    </ul>
-  </div>
   <button>Save</button>
+</div>
 </form>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let position of positions" cdkDrag>
+    {{position.name}}
+  </div>
+</div>

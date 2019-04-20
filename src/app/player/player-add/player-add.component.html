@@ -1,16 +1,21 @@
 <div class="form-container">
   <mat-form-field appearance="standard">
     <mat-label>First Name</mat-label>
-    <input matInput placeholder="First Name">
+    <input matInput #first placeholder="First Name"
+    (keyup.enter)="addFirst(first.value)"
+    (blur)="addFirst(first.value)">
   </mat-form-field>
   <mat-form-field appearance="standard">
     <mat-label>Last Name</mat-label>
-    <input matInput placeholder="Last Name">
+    <input matInput #last placeholder="Last Name"
+    (keyup.enter)="addLast(last.value)"
+    (blur)="addLast(last.value)">
   </mat-form-field>
+  <mat-label>Order the Positions: Favorite at the Top</mat-label>
   <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let position of positions" cdkDrag>
       {{ position.name }}
     </div>
   </div>
-  <button>Save</button>
+  <button (click)="onSave()">Save</button>
 </div>

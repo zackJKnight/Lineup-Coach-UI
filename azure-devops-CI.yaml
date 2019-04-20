@@ -1,6 +1,6 @@
 - task: Npm@1
   inputs:
     command: 'install'
-    - task: CmdLine@2
-      inputs:
-        script: 'ng serve'
+- task: CmdLine@2
+  inputs:
+    script: 'ng serve'

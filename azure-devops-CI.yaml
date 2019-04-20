@@ -3,3 +3,6 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'build'
+- task: PublishPipelineArtifact@0
+  inputs:
+    targetPath: './dist'
